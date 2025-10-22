@@ -48,6 +48,11 @@ export interface ISkill {
   category: "technical" | "management" | "soft";
 }
 
+export interface ILanguage {
+  name: string;
+  proficiency: "Native" | "Fluent" | "Advanced" | "Intermediate" | "Basic";
+}
+
 export interface ISocialMedia {
   linkedin: string;
   twitter?: string;
@@ -63,6 +68,7 @@ export interface IInfo {
   about: string;
   experience: IExperience[];
   education: IExperience[];
+  languages: ILanguage[];
   skills: ISkill[];
   socialMedia: ISocialMedia;
   projects: IProject[];

@@ -38,6 +38,32 @@ const featureProjects = info.projects.filter(project => project.isFeatured).slic
         details={info.education} 
       />
       
+      <!-- Languages Section -->
+      <section class="mb-16">
+        <div class="flex items-start justify-between flex-col lg:flex-row dark:text-light">
+          <div class="lg:w-1/4 mb-8 lg:mb-0">
+            <h2 class="text-2xl font-bold text-management-blue dark:text-blue-400 sticky top-8">
+              LANGUAGES
+            </h2>
+          </div>
+          
+          <div class="lg:w-3/4">
+            <div class="management-card">
+              <div class="grid md:grid-cols-2 gap-6">
+                {info.languages.map(language => (
+                  <div class="flex justify-between items-center">
+                    <span class="text-gray-900 dark:text-white font-medium">{language.name}</span>
+                    <span class="text-management-green dark:text-green-400 text-sm font-semibold px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full">
+                      {language.proficiency}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       {featureProjects.length > 0 && (
         <section class="mb-16">
           <div class="flex items-center justify-between mb-8">

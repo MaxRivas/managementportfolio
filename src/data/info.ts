@@ -1,6 +1,6 @@
 export const info = {
   baseUrl: "https://management-portfolio.vercel.app",
-  name: "Maximiliano (Max) Rivas",
+  name: "Max Rivas",
   jobDescription: "Director of Engineering",
   about: `Visionary engineering leader with 7+ years of experience driving innovation and delivering enterprise-scale, cloud-native software solutions in SaaS environments. Expert in leading multiple agile teams, shaping technical direction, and aligning product delivery with strategic business outcomes. Passionate about mentoring high-performing teams, championing modern engineering practices, and leveraging AI and automation to scale impact. Adept at fostering a culture of accountability, continuous improvement, and customer-centric excellence while managing stakeholder relationships and guiding process transformation.`,
 
@@ -102,51 +102,60 @@ export const info = {
     },
   ],
 
+  languages: [
+    { name: "Spanish", proficiency: "Native" },
+    { name: "English", proficiency: "Native" },
+  ],
+
   skills: [
-    { name: "Strategic Planning", level: "Expert", category: "management" },
-    { name: "Team Leadership", level: "Expert", category: "management" },
-    { name: "Project Management", level: "Expert", category: "management" },
+    { name: "Project Manager", level: "Expert", category: "management" },
+    { name: "Program Management", level: "Expert", category: "management" },
+    { name: "Management Tools (JIRA, ADO, Asana)", level: "Advanced", category: "management" },
     { name: "Process Improvement", level: "Advanced", category: "management" },
-    { name: "Change Management", level: "Advanced", category: "management" },
+    { name: "Product Owner", level: "Advanced", category: "management" },
+    { name: "Change Management", level: "Intermediate", category: "management" },
+    { name: "Microsoft Office Suite", level: "Expert", category: "technical" },
     { name: "Data Analysis", level: "Advanced", category: "technical" },
-    { name: "Agile/Scrum", level: "Advanced", category: "technical" },
-    { name: "SQL", level: "Intermediate", category: "technical" },
+    { name: "Methodologies (Agile,Scrum,Waterfall,XP)", level: "Advanced", category: "technical" },
+    { name: "Microsoft PowerApps and AI Tools", level: "Intermediate", category: "technical" },
+    { name: "Cloud Platform (AWS, Azure, GCP)", level: "Intermediate", category: "technical" },
+    { name: "CI/CD Pipelines (Azure and AWS)", level: "Intermediate", category: "technical" },
     { name: "Communication", level: "Expert", category: "soft" },
     { name: "Problem Solving", level: "Expert", category: "soft" },
+    { name: "Cross Functional Leadership", level: "Expert", category: "soft" },
+    { name: "Mentoring", level: "Expert", category: "soft" },
+    { name: "Empathic and Servant Leadership", level: "Expert", category: "soft" },
+    { name: "Stakeholder Management", level: "Expert", category: "soft" }
   ],
 
   socialMedia: {
     linkedin: "https://www.linkedin.com/in/maximiliano-a-rivas/",
+    facebook: "https://www.facebook.com/max.aj",
     email: "mailto:maxanzor13@gmail.com",
   },
 
   projects: [
     {
-      title: "Digital Transformation Dashboard",
+      title: "AI Chatbot for Financial Rule Questions",
       isFeatured: true,
-      thumbnail: "/assets/images/dashboard-project.jpg",
-      githubUrl: "https://github.com/mariaops/digital-dashboard",
-      liveUrl: "https://digital-dashboard-demo.vercel.app",
-      description: "A comprehensive analytics dashboard built to track digital transformation KPIs across multiple business units. Features real-time data visualization and automated reporting.",
-      technologies: ["React", "TypeScript", "D3.js", "Node.js", "PostgreSQL"]
+      thumbnail: "/assets/images/dfm.png",
+      liveUrl: "https://dfm.idaho.gov",
+      description: "Redesigned and implemented website to comply with accessibility regulations and deliver AI chatbot for Idaho Department of Finance to help citizens easily find answers to financial regulations and compliance questions using Azure AI services.",
+      technologies: ["WordPress", "Azure AI", "Elementor"]
     },
     {
-      title: "Process Optimization Tool",
+      title: "Paper to Digital Workflow Transformation",
       isFeatured: true,
-      thumbnail: "/assets/images/process-tool.jpg",
-      githubUrl: "https://github.com/mariaops/process-optimizer",
-      liveUrl: "https://process-optimizer.netlify.app",
-      description: "An interactive tool for mapping and optimizing business processes. Helps teams identify bottlenecks and streamline workflows.",
-      technologies: ["Vue.js", "Python", "Flask", "MySQL", "Chart.js"]
+      thumbnail: "/assets/images/iic.jpg",
+      description: "Redesigned internal workflow system for Idaho Industrial Commission to digitize paper-based processes into 6 Model Driven Applications, improving efficiency and reducing processing time by 40%.",
+      technologies: ["PowerApps", "Javascript", "Azure Blob Storage", "SQL"]
     },
     {
-      title: "Team Performance Analytics",
+      title: "AI Predictive Tool for Foster Children Safety Recommendations",
       isFeatured: true,
-      thumbnail: "/assets/images/analytics-project.jpg",
-      githubUrl: "https://github.com/mariaops/team-analytics",
-      liveUrl: "https://team-performance-analytics.herokuapp.com",
-      description: "A data-driven platform for tracking team productivity, engagement metrics, and performance indicators with predictive analytics.",
-      technologies: ["Angular", "TypeScript", "Python", "TensorFlow", "MongoDB"]
+      thumbnail: "/assets/images/dhw.jpg",
+      description: "Use of AI to analyze historical data, mapping to defined indicators, and provide safety recommendations for foster children, enhancing decision-making for judges in the State of Idaho.",
+      technologies: ["Python", "Azure AI", "Machine Learning", "OCR"]
     },
     {
       title: "Project Management System",
