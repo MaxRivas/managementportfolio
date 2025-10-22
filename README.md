@@ -80,6 +80,26 @@ A modern, professional portfolio template designed specifically for management p
    npm run build
    ```
 
+## 🧪 Testing Your Changes
+
+### Local Development
+```bash
+npm run dev
+# Opens at: http://localhost:4321/
+```
+
+### Pre-Deployment Testing (Required before merging to main)
+```bash
+npm run test:github
+# Opens at: http://localhost:4321/managementportfolio/
+```
+
+This tests your site with the exact same configuration that GitHub Pages uses, including the base path.
+
+**Important**: Always run `npm run test:github` before pushing to main branch to ensure your changes work correctly on GitHub Pages.
+
+For detailed testing instructions, see [TESTING.md](TESTING.md).
+
 ## 📝 Customization
 
 ### Personal Information
