@@ -15,6 +15,7 @@ export interface IExperience {
   location: string;
   startDate: string;
   endDate: string;
+  jobTitle: string;
   description: string[];
 }
 
