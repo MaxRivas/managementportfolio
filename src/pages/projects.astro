@@ -1,0 +1,102 @@
+---
+import { info } from "../data/info.ts";
+
+import ProjectsWrapper from "../components/general/ProjectsWrapper.astro";
+import MetaHead from "../components/general/MetaHead.astro";
+import Layout from "../layouts/Layout.astro";
+
+const allProjects = info.projects;
+const featuredProjects = info.projects.filter(project => project.isFeatured);
+const otherProjects = info.projects.filter(project => !project.isFeatured);
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <MetaHead
+      title="Projects"
+      description="Explore my portfolio of management and operational projects that demonstrate strategic thinking, process optimization, and leadership excellence."
+      ogImageUrl="/assets/images/projects-banner.jpg"
+    />
+  </head>
+
+  <body>
+    <Layout>
+      <div class="pt-8">
+        <div class="text-center mb-16">
+          <h1 class="text-management-blue dark:text-blue-400 mb-4">Projects Portfolio</h1>
+          <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            A collection of strategic initiatives, process improvements, and digital solutions 
+            that showcase my expertise in operations management and organizational leadership.
+          </p>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="grid md:grid-cols-4 gap-6 mb-16">
+          <div class="text-center management-card">
+            <div class="stats-counter">{allProjects.length}</div>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Total Projects</p>
+          </div>
+          <div class="text-center management-card">
+            <div class="stats-counter">{featuredProjects.length}</div>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Featured Projects</p>
+          </div>
+          <div class="text-center management-card">
+            <div class="stats-counter">8+</div>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Years Experience</p>
+          </div>
+          <div class="text-center management-card">
+            <div class="stats-counter">25+</div>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Teams Led</p>
+          </div>
+        </div>
+
+        {featuredProjects.length > 0 && (
+          <section class="mb-16">
+            <h2 class="text-2xl font-bold text-management-blue dark:text-blue-400 mb-8">
+              Featured Projects
+            </h2>
+            <ProjectsWrapper projects={featuredProjects} />
+          </section>
+        )}
+
+        {otherProjects.length > 0 && (
+          <section class="mb-16">
+            <h2 class="text-2xl font-bold text-management-blue dark:text-blue-400 mb-8">
+              Additional Projects
+            </h2>
+            <ProjectsWrapper projects={otherProjects} />
+          </section>
+        )}
+
+        <!-- Call to Action -->
+        <section class="text-center mb-16">
+          <div class="management-card max-w-2xl mx-auto">
+            <h3 class="text-xl font-semibold mb-4 text-management-blue dark:text-blue-400">
+              Ready to Collaborate?
+            </h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-6">
+              I'm always interested in discussing new opportunities, strategic initiatives, 
+              and operational challenges. Let's connect and explore how we can work together.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href={info.socialMedia.linkedin}
+                target="_blank"
+                class="btn-primary"
+              >
+                Connect on LinkedIn
+              </a>
+              <a
+                href={info.socialMedia.email}
+                class="btn-secondary"
+              >
+                Send Email
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </Layout>
+  </body>
+</html>

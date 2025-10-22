@@ -1,0 +1,46 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#059669"/>
+  <rect x="50" y="50" width="700" height="500" fill="#ffffff" rx="10"/>
+  
+  <!-- Process flow diagram -->
+  <rect x="70" y="80" width="660" height="50" fill="#f8fafc" rx="5"/>
+  <text x="400" y="110" text-anchor="middle" font-family="Arial" font-size="18" fill="#059669" font-weight="bold">
+    Process Optimization Workflow
+  </text>
+  
+  <!-- Process boxes -->
+  <rect x="90" y="160" width="120" height="80" fill="#dbeafe" rx="8"/>
+  <text x="150" y="190" text-anchor="middle" font-family="Arial" font-size="12" fill="#1e40af">Current</text>
+  <text x="150" y="210" text-anchor="middle" font-family="Arial" font-size="12" fill="#1e40af">Process</text>
+  
+  <!-- Arrow -->
+  <polygon points="230,200 260,185 260,195 250,200 260,205 260,215" fill="#64748b"/>
+  
+  <rect x="280" y="160" width="120" height="80" fill="#fef3c7" rx="8"/>
+  <text x="340" y="190" text-anchor="middle" font-family="Arial" font-size="12" fill="#92400e">Analysis</text>
+  <text x="340" y="210" text-anchor="middle" font-family="Arial" font-size="12" fill="#92400e">Phase</text>
+  
+  <!-- Arrow -->
+  <polygon points="420,200 450,185 450,195 440,200 450,205 450,215" fill="#64748b"/>
+  
+  <rect x="470" y="160" width="120" height="80" fill="#dcfce7" rx="8"/>
+  <text x="530" y="190" text-anchor="middle" font-family="Arial" font-size="12" fill="#166534">Optimized</text>
+  <text x="530" y="210" text-anchor="middle" font-family="Arial" font-size="12" fill="#166534">Process</text>
+  
+  <!-- Metrics -->
+  <rect x="90" y="280" width="620" height="200" fill="#f1f5f9" rx="8"/>
+  <text x="400" y="310" text-anchor="middle" font-family="Arial" font-size="16" fill="#1e3a8a" font-weight="bold">
+    Performance Metrics
+  </text>
+  
+  <!-- Bars -->
+  <rect x="120" y="340" width="80" height="100" fill="#ef4444"/>
+  <rect x="220" y="380" width="80" height="60" fill="#f59e0b"/>
+  <rect x="320" y="350" width="80" height="90" fill="#10b981"/>
+  <rect x="420" y="320" width="80" height="120" fill="#059669"/>
+  <rect x="520" y="300" width="80" height="140" fill="#047857"/>
+  
+  <text x="400" y="500" text-anchor="middle" font-family="Arial" font-size="24" fill="#059669" font-weight="bold">
+    Process Optimization Tool
+  </text>
+</svg>
