@@ -1,0 +1,118 @@
+---
+import { info } from "../data/info.ts";
+
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/home/Hero.astro";
+import Experience from "../components/home/Experience.astro";
+import ProjectsWrapper from "../components/general/ProjectsWrapper.astro";
+import MetaHead from "../components/general/MetaHead.astro";
+
+const featureProjects = info.projects.filter(project => project.isFeatured).slice(0, 6);
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <MetaHead
+      title="Portfolio"
+      description={info.about}
+      ogImageUrl="/assets/images/profile.jpg"
+    />
+  </head>
+
+  <body>
+    <Layout>
+      <Hero 
+        name={info.name} 
+        about={info.about} 
+        jobTitle={info.jobDescription}
+      />
+      
+      <Experience 
+        title="PROFESSIONAL EXPERIENCE" 
+        details={info.experience} 
+      />
+      
+      <Experience 
+        title="EDUCATION" 
+        details={info.education} 
+      />
+      
+      {featureProjects.length > 0 && (
+        <section class="mb-16">
+          <div class="flex items-center justify-between mb-8">
+            <h2 class="text-2xl font-bold text-management-blue dark:text-blue-400">
+              FEATURED PROJECTS
+            </h2>
+            <a 
+              href="/projects" 
+              class="text-management-green dark:text-green-400 hover:underline text-sm font-medium"
+            >
+              View All Projects →
+            </a>
+          </div>
+          <ProjectsWrapper projects={featureProjects} />
+        </section>
+      )}
+      
+      <!-- Skills Section -->
+      <section class="mb-16">
+        <h2 class="text-2xl font-bold text-management-blue dark:text-blue-400 mb-8">
+          CORE COMPETENCIES
+        </h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="management-card">
+            <h3 class="text-lg font-semibold mb-4 text-management-blue dark:text-blue-400">
+              Management Skills
+            </h3>
+            <div class="space-y-2">
+              {info.skills
+                .filter(skill => skill.category === "management")
+                .map(skill => (
+                  <div class="flex justify-between items-center">
+                    <span class="text-sm">{skill.name}</span>
+                    <span class="skill-badge text-xs">{skill.level}</span>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+          
+          <div class="management-card">
+            <h3 class="text-lg font-semibold mb-4 text-management-green dark:text-green-400">
+              Technical Skills
+            </h3>
+            <div class="space-y-2">
+              {info.skills
+                .filter(skill => skill.category === "technical")
+                .map(skill => (
+                  <div class="flex justify-between items-center">
+                    <span class="text-sm">{skill.name}</span>
+                    <span class="skill-badge text-xs">{skill.level}</span>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+          
+          <div class="management-card">
+            <h3 class="text-lg font-semibold mb-4 text-accent dark:text-yellow-400">
+              Soft Skills
+            </h3>
+            <div class="space-y-2">
+              {info.skills
+                .filter(skill => skill.category === "soft")
+                .map(skill => (
+                  <div class="flex justify-between items-center">
+                    <span class="text-sm">{skill.name}</span>
+                    <span class="skill-badge text-xs">{skill.level}</span>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+      </section>
+    </Layout>
+  </body>
+</html>

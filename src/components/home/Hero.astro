@@ -1,0 +1,40 @@
+---
+import { IHeroProps } from "../../types/index.ts";
+
+const { name, about, jobTitle } = Astro.props as IHeroProps;
+---
+
+<section class="text-center sm:text-left">
+  <p class="dark:text-light mt-[80px] sm:mt-[117px] text-lg text-gray-600 dark:text-gray-300">
+    Hello, I'm
+  </p>
+  <h1 class="text-management-blue dark:text-blue-400">{name}</h1>
+  <p class="text-xl sm:text-2xl font-semibold text-management-green dark:text-green-400 mb-6">
+    {jobTitle}
+  </p>
+  <p class="dark:text-light text-lg mb-16 max-w-3xl leading-relaxed">
+    {about}
+  </p>
+  
+  <!-- Call to Action Buttons -->
+  <div class="flex flex-col sm:flex-row gap-4 justify-center sm:justify-start">
+    <a
+      href="#experience"
+      class="btn-primary inline-flex items-center gap-2"
+    >
+      <span>View Experience</span>
+      <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+      </svg>
+    </a>
+    <a
+      href="/projects"
+      class="btn-secondary inline-flex items-center gap-2"
+    >
+      <span>Browse Projects</span>
+      <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+      </svg>
+    </a>
+  </div>
+</section>

@@ -1,0 +1,33 @@
+{
+  "name": "management-portfolio",
+  "version": "1.0.0",
+  "description": "A modern portfolio template for management professionals built with Astro",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "keywords": [
+    "astro",
+    "portfolio",
+    "management",
+    "tailwindcss",
+    "typescript"
+  ],
+  "author": "Management Portfolio",
+  "license": "MIT",
+  "dependencies": {
+    "@astrojs/sitemap": "^3.2.0",
+    "@astrojs/tailwind": "^5.1.1",
+    "astro": "^4.16.18",
+    "astro-robots-txt": "^1.0.0",
+    "tailwindcss": "^3.4.14"
+  },
+  "devDependencies": {
+    "@types/node": "^22.8.4",
+    "typescript": "^5.6.3"
+  }
+}
