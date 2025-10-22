@@ -151,38 +151,106 @@ export const info = {
       technologies: ["PowerApps", "Javascript", "Azure Blob Storage", "SQL"]
     },
     {
-      title: "AI Predictive Tool for Foster Children Safety Recommendations",
+      title: "Modernization of CTE Applications",
       isFeatured: true,
-      thumbnail: "/assets/images/dhw.jpg",
-      description: "Use of AI to analyze historical data, mapping to defined indicators, and provide safety recommendations for foster children, enhancing decision-making for judges in the State of Idaho.",
-      technologies: ["Python", "Azure AI", "Machine Learning", "OCR"]
-    },
-    {
-      title: "Project Management System",
-      isFeatured: false,
-      thumbnail: "/assets/images/pm-system.jpg",
-      githubUrl: "https://github.com/mariaops/pm-system",
+      thumbnail: "/assets/images/cte.png",
+      githubUrl: "https://cte.skillstack.idaho.gov",
       liveUrl: "https://pm-system-demo.vercel.app",
       description: "Custom project management solution with resource allocation, timeline tracking, and automated progress reporting.",
       technologies: ["React", "Node.js", "Express", "PostgreSQL", "Redis"]
     },
     {
-      title: "Operations KPI Tracker",
+      title: "AI Predictive Tool for Foster Children Safety",
       isFeatured: false,
-      thumbnail: "/assets/images/kpi-tracker.jpg",
-      githubUrl: "https://github.com/mariaops/kpi-tracker",
-      liveUrl: "https://ops-kpi-tracker.netlify.app",
-      description: "Real-time KPI tracking system for operations teams with customizable metrics and automated alerts.",
-      technologies: ["Svelte", "TypeScript", "Firebase", "Chart.js"]
+      thumbnail: "/assets/images/dhw.jpg",
+      liveUrl: "https://healthandwelfare.idaho.gov/services-programs/children-families-older-adults/child-and-family-services-and-foster-care-7",
+      description: "Use of AI to analyze historical data, mapping to defined indicators, and provide safety recommendations for foster children, enhancing decision-making for judges in the State of Idaho.",
+      technologies: ["Python", "Azure AI", "Machine Learning", "OCR"]
     },
     {
-      title: "Change Management Portal",
+      title: "Upgrade On-Premise Dynamics to Hybrid",
       isFeatured: false,
-      thumbnail: "/assets/images/change-portal.jpg",
-      githubUrl: "https://github.com/mariaops/change-portal",
-      liveUrl: "https://change-management-portal.herokuapp.com",
-      description: "Comprehensive platform for managing organizational changes with stakeholder tracking and communication tools.",
-      technologies: ["React", "GraphQL", "Node.js", "MongoDB", "Socket.io"]
+      thumbnail: "/assets/images/brand.jpg",
+      liveUrl: "https://isp.idaho.gov/brands/",
+      description: "Design and implement a hybrid solution for on-premise Dynamics applications, integrating cloud capabilities while maintaining local infrastructure.",
+      technologies: ["SQL", "Dynamics 365", "Node.js"]
+    },
+    {
+      title: "Modernization of On-Premises Application to Cloud-Native",
+      isFeatured: false,
+      thumbnail: "/assets/images/intelli.jpeg",
+      liveUrl: "http://www.intelliscience.com/",
+      description: "Reachitected legacy on-premises application into a cloud-native solution, improving scalability and support for private cloud deployments.",
+      technologies: [".NET", "Python", "SQL", "React"]
+    },
+    {
+      title: "Insurance Workflow Automation System from Paper to Digital for Petroleum Dispensers",
+      isFeatured: false,
+      thumbnail: "/assets/images/sif.png",
+      liveUrl: "https://www.idahosif.org",
+      description: "Converted paper-based insurance workflow processes into a digital system for Idaho State Insurance Fund, enhancing efficiency and accuracy in managing petroleum dispenser insurance applications.",
+      technologies: ["SQL", "PowerApps", "JavaScript", "Azure Blob Storage"]
+    },
+    {
+      title: "Firmware Development for Embedded Systems in Printers",
+      isFeatured: false,
+      thumbnail: "/assets/images/dune.jpg",
+      liveUrl: "https://support.hp.com/us-en/printer",
+      description: "Developed firmware for embedded systems in printers, improving functionality and user experience for next generation of printers.",
+      technologies: ["C++", "Yocto", "Linux", "Qt", "Embedded Systems", "Firmware Development"]
+    },
+    {
+      title: "Telemetry and Part Replacement Prediction for Printer components",
+      isFeatured: false,
+      thumbnail: "/assets/images/smart.png",
+      liveUrl: "https://support.hp.com/us-en/contact",
+      description: "Developed telemetry and part replacement prediction system for printer components, enhancing maintenance and reducing downtime.",
+      technologies: ["Python", "SQL", "Machine Learning", "Power BI"]
+    },
+    {
+      title: "Analyze image data and calculate parking spot usage through Computer Vision",
+      isFeatured: false,
+      thumbnail: "/assets/images/ketchum.jpg",
+      liveUrl: "https://www.ketchumidaho.org",
+      description: "Developed a system to analyze image data and calculate parking spot usage through computer vision, improving space management for the City of Ketchum.",
+      technologies: ["Python", "OpenCV", "Machine Learning", "Computer Vision"]
+    },
+    {
+      title: "Market Research and Data Analysis for Rates and Fees Improvement",
+      isFeatured: false,
+      thumbnail: "/assets/images/rates.png",
+      description: "Conducted market research and data analysis to identify opportunities for improving rates and fees which resulted in a 15% increase in revenue.",
+      technologies: ["Python", "Pandas", "Data Analysis", "DataVerse"]
+    },
+    {
+      title: "Financial Account Application for worldwide expansion",
+      isFeatured: false,
+      thumbnail: "/assets/images/financial.jpeg",
+      description: "Developed a financial account insight application to support worldwide expansion efforts, providing key analytics and reporting capabilities.",
+      technologies: ["Python", "Power BI", "Data Analysis", "PowerApps"]
+    },
+    {
+      title: "HR Onboarding Automation System and integration with existing ERP",
+      isFeatured: false,
+      thumbnail: "/assets/images/hr.png",
+      description: "Developed an HR onboarding automation system and integrated it with existing ERP solutions to streamline the onboarding process, resource allocation, capability tracking.",
+      technologies: ["JSON", "Power BI", "Databricks", "PowerApps"]
+    },
+    {
+      title: "Native Mobile Application for HP Printers and Certified Print Services",
+      isFeatured: false,
+      thumbnail: "/assets/images/roam.png",
+      liveUrl: "https://www.roamprint.com",
+      description: "Developed a native mobile application for HP printers and certified print services, enhancing user experience and accessibility.",
+      technologies: ["Kotlin", "Swift", "REST APIs", "Mobile Development"]
+    },
+    {
+      title: "Custom built automation framework for testing Windows Print Drivers and certification through Microsoft WHQL",
+      isFeatured: false,
+      thumbnail: "/assets/images/topcat.jpg",
+      liveUrl: "https://www.roamprint.com",
+      description: "Developed a custom built automation framework for testing Windows Print Drivers and certification through Microsoft WHQL, improving testing efficiency and accuracy.",
+      technologies: [".NET", "XML", "Windows Drivers", "Automation"]
     }
   ],
 };
