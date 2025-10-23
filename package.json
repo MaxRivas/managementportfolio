@@ -13,6 +13,7 @@
     "preview:github": "astro preview",
     "test:local": "npm run build && npm run preview",
     "test:github": "npm run build:github && npm run preview:github",
+    "run:github": "npm run build:github && npm run preview:github",
     "astro": "astro"
   },
   "keywords": [
