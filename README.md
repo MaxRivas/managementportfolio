@@ -2,6 +2,12 @@
 
 A modern, professional portfolio template designed specifically for management professionals, built with Astro, TypeScript, and Tailwind CSS.
 
+## 🔗 **Live Demo**
+
+**👀 [View Live Portfolio →](https://maxrivas.github.io/managementportfolio)**
+
+> **Note**: The GitHub repository URL shows the code structure. The live website is deployed at the link above.
+
 ## 🌟 Features
 
 - **Professional Design**: Clean, modern design optimized for management professionals

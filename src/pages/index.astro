@@ -8,6 +8,7 @@ import ProjectsWrapper from "../components/general/ProjectsWrapper.astro";
 import MetaHead from "../components/general/MetaHead.astro";
 
 const featureProjects = info.projects.filter(project => project.isFeatured).slice(0, 6);
+const baseUrl = import.meta.env.BASE_URL ?? "/";
 ---
 
 <!DOCTYPE html>
@@ -71,7 +72,7 @@ const featureProjects = info.projects.filter(project => project.isFeatured).slic
               FEATURED PROJECTS
             </h2>
             <a 
-              href="/projects" 
+              href={`${baseUrl}${baseUrl.endsWith('/') ? '' : '/'}projects`}
               class="text-management-green dark:text-green-400 hover:underline text-sm font-medium"
             >
               View All Projects →

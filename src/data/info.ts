@@ -139,8 +139,16 @@ export const info = {
       title: "AI Chatbot for Financial Rule Questions",
       isFeatured: true,
       thumbnail: "/assets/images/dfm.png",
-      liveUrl: "https://dfm.idaho.gov",
+      liveUrl: "https://adminrules.idaho.gov",
       description: "Redesigned and implemented website to comply with accessibility regulations and deliver AI chatbot for Idaho Department of Finance to help citizens easily find answers to financial regulations and compliance questions using Azure AI services.",
+      technologies: ["WordPress", "Azure AI", "Elementor"]
+    },
+    {
+      title: "Modernization and accessibility compliance for Idaho Department of Finance Website",
+      isFeatured: false,
+      thumbnail: "/assets/images/admin.jpg",
+      liveUrl: "https://dfm.idaho.gov",
+      description: "Redesigned and implemented website to comply with accessibility regulations for Idaho Department of Finance to help citizens easily find answers to financial regulations and compliance questions using Azure AI services.",
       technologies: ["WordPress", "Azure AI", "Elementor"]
     },
     {
@@ -190,6 +198,14 @@ export const info = {
       liveUrl: "https://www.idahosif.org",
       description: "Converted paper-based insurance workflow processes into a digital system for Idaho State Insurance Fund, enhancing efficiency and accuracy in managing petroleum dispenser insurance applications.",
       technologies: ["SQL", "PowerApps", "JavaScript", "Azure Blob Storage"]
+    },
+    {
+      title: "Data Analytics, Processing, and Reporting Dashboard for City Of Boise",
+      isFeatured: false,
+      thumbnail: "/assets/images/cob.jpeg",
+      liveUrl: "https://www.cityofboise.org",
+      description: "Developed a data analytics and reporting dashboard for City Of Boise, providing insights and visualizations to support decision-making.",
+      technologies: ["Python", "SQL", "Power BI", "Jupyter Notebooks"]
     },
     {
       title: "Firmware Development for Embedded Systems in Printers",
@@ -243,6 +259,14 @@ export const info = {
       liveUrl: "https://www.roamprint.com",
       description: "Developed a native mobile application for HP printers and certified print services, enhancing user experience and accessibility.",
       technologies: ["Kotlin", "Swift", "REST APIs", "Mobile Development"]
+    },
+    {
+      title: "Swap Team member for Escalations and Big Deals in Printing Organization",
+      isFeatured: false,
+      thumbnail: "/assets/images/extensibility.png",
+      liveUrl: "https://www.roamprint.com",
+      description: "Software engineer on the swap team for escalations and big deals in the printing organization, providing expert support and solutions for complex issues.",
+      technologies: ["Node.js", ".NET", "Java", "Embedded Systems"]
     },
     {
       title: "Custom built automation framework for testing Windows Print Drivers and certification through Microsoft WHQL",
