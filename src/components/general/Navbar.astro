@@ -2,7 +2,8 @@
 import { info } from "../../data/info.ts";
 import { createLogo } from "../../utils/index.ts";
 
-const baseUrl = import.meta.env.BASE_URL || "/";
+// Get base URL from environment or use default
+const baseUrl = import.meta.env.BASE_URL ?? "/";
 ---
 
 <header

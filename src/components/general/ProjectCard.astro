@@ -2,6 +2,8 @@
 import { IProjectDetails } from "../../types/index.ts";
 const { projectDetail } = Astro.props as IProjectDetails;
 const { title, thumbnail, liveUrl, githubUrl, description, technologies } = projectDetail;
+const baseUrl = import.meta.env.BASE_URL ?? "/";
+const imageSrc = thumbnail.startsWith('/') ? `${baseUrl.endsWith('/') ? baseUrl : baseUrl + '/'}${thumbnail.slice(1)}` : thumbnail;
 ---
 
 <article class="project-card w-full max-h-[30rem] overflow-hidden relative group management-card">
@@ -67,7 +69,7 @@ const { title, thumbnail, liveUrl, githubUrl, description, technologies } = proj
     class="block"
   >
     <img
-      src={thumbnail}
+      src={imageSrc}
       class="w-full h-48 object-cover scale-100 hover:scale-105 transition duration-500"
       loading="lazy"
       alt={`${title} project thumbnail`}
