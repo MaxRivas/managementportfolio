@@ -69,12 +69,9 @@ html {
 .stats-counter {
   font-size: 2rem;
   font-weight: 700;
-  color: #1e3a8a;
+  color: var(--mp-accent, #1e3a8a);
 }
 
-.dark .stats-counter {
-  color: #60a5fa;
-}
 
 .experience-timeline {
   position: relative;
@@ -99,11 +96,44 @@ html {
   height: 1rem;
   background: #1e3a8a;
   border-radius: 50%;
-  border: 2px solid #ffffff;
+  border: 2px solid var(--mp-bg, #ffffff);
 }
 
-.dark .timeline-dot {
-  border-color: #111111;
+/* Theme variables: light by default, overridden when .dark is present */
+:root {
+  --mp-bg: #ffffff;
+  --mp-text: #0f172a; /* slate-900 */
+  --mp-muted: #475569; /* slate-500 */
+  --mp-accent: #1e3a8a;
+  --mp-accent-2: #059669;
+  --mp-accent-3: #f59e0b;
+  --mp-card-border: #e6eef8;
+}
+
+.dark {
+  --mp-bg: #0b1220; /* slightly lighter than pure black for depth */
+  --mp-text: #e6eef8;
+  --mp-muted: #94a3b8;
+  --mp-accent: #60a5fa;
+  --mp-accent-2: #34d399;
+  --mp-accent-3: #f59e0b;
+  --mp-card-border: #111827;
+}
+
+/* Apply theme variables to base elements so text/background use the correct colors */
+html, body {
+  background-color: var(--mp-bg);
+  color: var(--mp-text);
+}
+
+/* Links and interactive elements use accent colors and inherit readable text color */
+a {
+  color: var(--mp-accent-2);
+}
+
+a:hover,
+a:focus {
+  color: var(--mp-accent-3);
 }
 
 /* Hover effects for project cards */
