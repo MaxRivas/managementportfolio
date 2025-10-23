@@ -2,6 +2,7 @@
 import { IHeroProps } from "../../types/index.ts";
 
 const { name, about, jobTitle } = Astro.props as IHeroProps;
+const baseUrl = import.meta.env.BASE_URL || "/";
 ---
 
 <section class="text-center sm:text-left">
@@ -28,7 +29,7 @@ const { name, about, jobTitle } = Astro.props as IHeroProps;
       </svg>
     </a>
     <a
-      href="/projects"
+      href={`${baseUrl}projects`}
       class="btn-secondary inline-flex items-center gap-2"
     >
       <span>Browse Projects</span>
