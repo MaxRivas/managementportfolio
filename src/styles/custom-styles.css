@@ -1,3 +1,21 @@
+/* Cross-browser tweaks */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Provide vendor-prefixed backdrop-filter fallback */
+.backdrop-blur {
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+/* Ensure gradient text has a reasonable fallback in browsers that don't support background-clip:text */
+.main-heading {
+  color: currentColor; /* fallback */
+}
+
 /* gradient heading */
 .main-heading {
   display: inline-block;

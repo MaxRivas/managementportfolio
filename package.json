@@ -34,6 +34,16 @@
   },
   "devDependencies": {
     "@types/node": "^22.8.4",
-    "typescript": "^5.6.3"
-  }
+    "typescript": "^5.6.3",
+    "postcss": "^8.4.24",
+    "autoprefixer": "^10.4.14"
+  },
+  "browserslist": [
+    "defaults",
+    "last 2 Chrome versions",
+    "last 2 Firefox versions",
+    "last 2 Safari versions",
+    "last 2 Edge versions",
+    "not dead"
+  ]
 }
