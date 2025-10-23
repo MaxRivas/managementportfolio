@@ -29,7 +29,7 @@ const baseUrl = import.meta.env.BASE_URL ?? "/";
       </svg>
     </a>
     <a
-      href={`${baseUrl}projects`}
+      href={`${baseUrl}${baseUrl.endsWith('/') ? '' : '/'}projects`}
       class="btn-secondary inline-flex items-center gap-2"
     >
       <span>Browse Projects</span>

@@ -72,7 +72,7 @@ const baseUrl = import.meta.env.BASE_URL ?? "/";
               FEATURED PROJECTS
             </h2>
             <a 
-              href={`${baseUrl}projects`}
+              href={`${baseUrl}${baseUrl.endsWith('/') ? '' : '/'}projects`}
               class="text-management-green dark:text-green-400 hover:underline text-sm font-medium"
             >
               View All Projects →

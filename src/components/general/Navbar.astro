@@ -17,7 +17,7 @@ const baseUrl = import.meta.env.BASE_URL ?? "/";
   <nav>
     <ul class="flex items-center">
       <li>
-        <a class="p-4 dark:text-light block text-lg hover:text-management-blue dark:hover:text-blue-400 transition-colors" href={`${baseUrl}projects`}
+        <a class="p-4 dark:text-light block text-lg hover:text-management-blue dark:hover:text-blue-400 transition-colors" href={`${baseUrl}${baseUrl.endsWith('/') ? '' : '/'}projects`}
           >Projects</a
         >
       </li>
