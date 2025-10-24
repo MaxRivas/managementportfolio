@@ -155,6 +155,7 @@ export const info = {
       title: "Paper to Digital Workflow Transformation",
       isFeatured: true,
       thumbnail: "/assets/images/iic.jpg",
+      liveUrl: "https://iic.idaho.gov",
       description: "Redesigned internal workflow system for Idaho Industrial Commission to digitize paper-based processes into 6 Model Driven Applications, improving efficiency and reducing processing time by 40%.",
       technologies: ["PowerApps", "Javascript", "Azure Blob Storage", "SQL"]
     },
@@ -162,8 +163,7 @@ export const info = {
       title: "Modernization of CTE Applications",
       isFeatured: true,
       thumbnail: "/assets/images/cte.png",
-      githubUrl: "https://cte.skillstack.idaho.gov",
-      liveUrl: "https://pm-system-demo.vercel.app",
+      liveUrl: "https://cte.skillstack.idaho.gov",
       description: "Custom project management solution with resource allocation, timeline tracking, and automated progress reporting.",
       technologies: ["React", "Node.js", "Express", "PostgreSQL", "Redis"]
     },
