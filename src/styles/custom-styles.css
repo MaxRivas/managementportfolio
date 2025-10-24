@@ -43,6 +43,11 @@ html {
   }
 }
 
+/* Experience marker color follows theme variables */
+.experience-marker {
+  color: var(--mp-accent, #1e3a8a);
+}
+
 /* Provide vendor-prefixed backdrop-filter fallback */
 .backdrop-blur {
   -webkit-backdrop-filter: blur(8px);
