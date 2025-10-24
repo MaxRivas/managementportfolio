@@ -15,6 +15,14 @@ module.exports = {
         "management-blue": "#1e3a8a",
         "management-green": "#059669",
         accent: "#f59e0b",
+        /* CSS variable-backed tokens for runtime theming and Tailwind utility mapping */
+        "mp-bg": "var(--mp-bg)",
+        "mp-text": "var(--mp-text)",
+        "mp-muted": "var(--mp-muted)",
+        "mp-accent": "var(--mp-accent)",
+        "mp-accent-2": "var(--mp-accent-2)",
+        "mp-accent-3": "var(--mp-accent-3)",
+        "mp-card-border": "var(--mp-card-border)",
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],
