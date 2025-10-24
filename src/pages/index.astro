@@ -29,10 +29,13 @@ const baseUrl = import.meta.env.BASE_URL ?? "/";
         jobTitle={info.jobDescription}
       />
       
-      <Experience 
-        title="PROFESSIONAL EXPERIENCE" 
-        details={info.experience} 
-      />
+      <!-- Professional Experience target -->
+      <section id="experience" class="mb-16 reveal">
+        <Experience 
+          title="PROFESSIONAL EXPERIENCE" 
+          details={info.experience} 
+        />
+      </section>
       
       <Experience 
         title="EDUCATION" 
@@ -66,7 +69,7 @@ const baseUrl = import.meta.env.BASE_URL ?? "/";
       </section>
       
       {featureProjects.length > 0 && (
-        <section class="mb-16">
+        <section class="mb-16 reveal">
           <div class="flex items-center justify-between mb-8">
             <h2 class="text-2xl font-bold text-management-blue dark:text-blue-400">
               FEATURED PROJECTS
