@@ -22,7 +22,9 @@ const baseUrl = import.meta.env.BASE_URL ?? "/";
         >
       </li>
       <li>
-        <a class="p-4 dark:text-light block text-lg hover:text-management-blue dark:hover:text-blue-400 transition-colors" href="#experience"
+        <a
+          class="p-4 dark:text-light block text-lg hover:text-management-blue dark:hover:text-blue-400 transition-colors"
+          href={`${baseUrl}${baseUrl.endsWith('/') ? '' : '/'}#experience`}
           >Experience</a
         >
       </li>
@@ -30,5 +32,3 @@ const baseUrl = import.meta.env.BASE_URL ?? "/";
     </ul>
   </nav>
 </header>
-
-<!-- Theme toggling removed; site defaults to dark mode -->

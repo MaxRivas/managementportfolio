@@ -20,7 +20,7 @@ const baseUrl = import.meta.env.BASE_URL ?? "/";
   <!-- Call to Action Buttons -->
   <div class="flex flex-col sm:flex-row gap-4 justify-center sm:justify-start">
     <a
-      href="#experience"
+      href={`${baseUrl}${baseUrl.endsWith('/') ? '' : '/'}#experience`}
       class="btn-primary inline-flex items-center gap-2"
     >
       <span>View Experience</span>
