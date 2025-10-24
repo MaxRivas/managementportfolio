@@ -9,3 +9,73 @@ import "../styles/style.css";
   <slot />
 </main>
 <Footer />
+
+<!-- Client helper: if user lands on a page with a hash but not on the site root,
+     redirect to the site's root + hash so anchors work across pages
+     (works for GitHub Pages subpaths because it uses the first path segment as base). -->
+<script is:inline>
+  (function () {
+    try {
+      const hash = window.location.hash;
+      if (!hash) return;
+
+      // Compute site base path from the first non-empty path segment.
+      // Examples:
+      //  - / => basePath = '/'
+      //  - /managementportfolio/projects => basePath = '/managementportfolio/'
+      const segs = window.location.pathname.split('/').filter(Boolean);
+      const basePath = segs.length > 0 ? '/' + segs[0] + '/' : '/';
+
+      // Normalize paths (ensure both compared without trailing slash)
+      const normalize = (p) => p.replace(/\/$/, '');
+      const current = normalize(window.location.pathname);
+      const baseNormalized = normalize(basePath);
+
+      // If we're not currently on the site root, redirect to root + hash
+      if (current !== baseNormalized) {
+        // Build target (basePath already ends with '/'), include hash
+        const target = basePath + (hash.startsWith('#') ? hash : '#' + hash);
+        // Use location.replace to avoid polluting history with an extra entry
+        window.location.replace(target);
+      }
+    } catch (e) {
+      // noop on errors
+      console.debug('hash-redirect helper error', e);
+    }
+  })();
+</script>
+
+<script is:inline>
+  (function () {
+    try {
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+      const revealObserver = new IntersectionObserver(
+        (entries, obs) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const el = entry.target;
+              el.classList.add('is-visible');
+
+              // Optionally stagger child elements with class .reveal-item
+              const items = el.querySelectorAll('.reveal-item');
+              if (items.length) {
+                items.forEach((child, i) => {
+                  child.style.transitionDelay = (i * 80) + 'ms';
+                  child.classList.add('is-visible');
+                });
+              }
+
+              obs.unobserve(el);
+            }
+          });
+        },
+        { threshold: 0.12 }
+      );
+
+      document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
+    } catch (e) {
+      console.debug('reveal observer error', e);
+    }
+  })();
+</script>

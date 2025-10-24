@@ -5,6 +5,44 @@ html {
   text-rendering: optimizeLegibility;
 }
 
+/* Smooth scrolling for in-page navigation */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Reveal on scroll animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 600ms cubic-bezier(.2,.9,.2,1), transform 600ms cubic-bezier(.2,.9,.2,1);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Staggered children reveal when needed */
+.reveal .reveal-item {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 450ms ease, transform 450ms ease;
+}
+
+.reveal.is-visible .reveal-item {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal .reveal-item {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
+
 /* Provide vendor-prefixed backdrop-filter fallback */
 .backdrop-blur {
   -webkit-backdrop-filter: blur(8px);
@@ -69,12 +107,9 @@ html {
 .stats-counter {
   font-size: 2rem;
   font-weight: 700;
-  color: #1e3a8a;
+  color: var(--mp-accent, #1e3a8a);
 }
 
-.dark .stats-counter {
-  color: #60a5fa;
-}
 
 .experience-timeline {
   position: relative;
@@ -99,11 +134,44 @@ html {
   height: 1rem;
   background: #1e3a8a;
   border-radius: 50%;
-  border: 2px solid #ffffff;
+  border: 2px solid var(--mp-bg, #ffffff);
 }
 
-.dark .timeline-dot {
-  border-color: #111111;
+/* Theme variables: light by default, overridden when .dark is present */
+:root {
+  --mp-bg: #ffffff;
+  --mp-text: #0f172a; /* slate-900 */
+  --mp-muted: #475569; /* slate-500 */
+  --mp-accent: #1e3a8a;
+  --mp-accent-2: #059669;
+  --mp-accent-3: #f59e0b;
+  --mp-card-border: #e6eef8;
+}
+
+.dark {
+  --mp-bg: #0b1220; /* slightly lighter than pure black for depth */
+  --mp-text: #e6eef8;
+  --mp-muted: #94a3b8;
+  --mp-accent: #60a5fa;
+  --mp-accent-2: #34d399;
+  --mp-accent-3: #f59e0b;
+  --mp-card-border: #111827;
+}
+
+/* Apply theme variables to base elements so text/background use the correct colors */
+html, body {
+  background-color: var(--mp-bg);
+  color: var(--mp-text);
+}
+
+/* Links and interactive elements use accent colors and inherit readable text color */
+a {
+  color: var(--mp-accent-2);
+}
+
+a:hover,
+a:focus {
+  color: var(--mp-accent-3);
 }
 
 /* Hover effects for project cards */
