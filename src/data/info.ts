@@ -1,7 +1,7 @@
 export const info = {
   baseUrl: "https://management-portfolio.vercel.app",
   name: "Max Rivas",
-  jobDescription: "Director of Engineering",
+  jobDescription: "Senior Manager",
   about: `Visionary engineering leader with 7+ years of experience driving innovation and delivering enterprise-scale, cloud-native software solutions in SaaS environments. Expert in leading multiple agile teams, shaping technical direction, and aligning product delivery with strategic business outcomes. Passionate about mentoring high-performing teams, championing modern engineering practices, and leveraging AI and automation to scale impact. Adept at fostering a culture of accountability, continuous improvement, and customer-centric excellence while managing stakeholder relationships and guiding process transformation.`,
 
   experience: [
@@ -10,7 +10,7 @@ export const info = {
       location: "Meridian, ID",
       startDate: "May 2023",
       endDate: "October 2025",
-      jobTitle: "Director of Engineering",
+      jobTitle: "Senior Manager",
       description: [
         "Spearheaded automation programs for financial accounting, contractual development, RFP responses, and project tracking which improved operational efficiency by 25%.",
         "Managed and delivered two AI projects for Idaho agencies: a financial rule management chatbot and a predictive tool for child safety recommendations using Microsoft AI tools.",
